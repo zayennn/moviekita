@@ -241,14 +241,12 @@ const VideoPlayer = ({ movie }) => {
               onClick={skipForward}
               className="p-4 hover:bg-white/20 rounded-full transition-colors"
             >
-              <FiSkipForward className="text-3xl" /> {/* Ganti SkipForward jadi FiSkipForward */}
+              <FiSkipForward className="text-3xl" />
             </button>
           </div>
         </div>
 
-        {/* Bottom Controls */}
         <div className="absolute bottom-0 left-0 right-0 p-4 space-y-3">
-          {/* Progress Bar */}
           <div className="flex items-center space-x-2">
             <span className="text-sm">{formatTime(currentTime)}</span>
             <input
