@@ -231,9 +231,9 @@ const VideoPlayer = ({ movie }) => {
               className="p-4 bg-purple-600 hover:bg-purple-700 rounded-full transition-colors"
             >
               {isPlaying ? (
-                <FiPause className="text-4xl" /> {/* Ganti Pause jadi FiPause */}
+                <FiPause className="text-4xl" />
               ) : (
-                <FiPlay className="text-4xl ml-1" /> {/* Ganti Play jadi FiPlay */}
+                <FiPlay className="text-4xl ml-1" />
               )}
             </button>
             
