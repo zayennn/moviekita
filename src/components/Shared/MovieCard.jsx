@@ -47,7 +47,7 @@ const MovieCard = ({ movie }) => {
           
           <div className="flex items-center justify-between text-sm text-gray-400">
             <div className="flex items-center space-x-2">
-              <FiClock className="text-purple-400" /> {/* Ganti Clock jadi FiClock */}
+              <FiClock className="text-purple-400" />
               <span>{movie.duration}</span>
             </div>
             <div className="flex items-center space-x-2">
