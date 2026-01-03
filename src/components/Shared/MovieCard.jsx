@@ -51,7 +51,7 @@ const MovieCard = ({ movie }) => {
               <span>{movie.duration}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <FiCalendar className="text-purple-400" /> {/* Ganti Calendar jadi FiCalendar */}
+              <FiCalendar className="text-purple-400" />
               <span>{movie.year}</span>
             </div>
           </div>
