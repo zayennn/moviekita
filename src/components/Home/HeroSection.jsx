@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiPlay } from 'react-icons/fi'; // Perbaiki import
+import { FiPlay } from 'react-icons/fi';
 
 const HeroSection = () => {
   return (
