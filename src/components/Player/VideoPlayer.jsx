@@ -302,7 +302,7 @@ const VideoPlayer = ({ movie }) => {
               onClick={toggleFullscreen}
               className="p-2 hover:bg-white/20 rounded-full transition-colors"
             >
-              <FiMaximize className="text-xl" /> {/* Ganti Maximize jadi FiMaximize */}
+              <FiMaximize className="text-xl" />
             </button>
           </div>
         </div>
