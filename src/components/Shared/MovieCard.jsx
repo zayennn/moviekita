@@ -24,7 +24,7 @@ const MovieCard = ({ movie }) => {
             className="absolute inset-0 flex items-center justify-center"
           >
             <div className="bg-purple-600 p-4 rounded-full">
-              <FiPlay className="text-2xl" /> {/* Ganti Play jadi FiPlay */}
+              <FiPlay className="text-2xl" />
             </div>
           </motion.div>
         </div>
