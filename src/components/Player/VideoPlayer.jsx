@@ -23,7 +23,6 @@ const VideoPlayer = ({ movie }) => {
   const [showControls, setShowControls] = useState(true);
   const [orientation, setOrientation] = useState(movie.orientation || 'landscape');
 
-  // Handle video metadata loaded
   useEffect(() => {
     const video = videoRef.current;
     
@@ -38,7 +37,6 @@ const VideoPlayer = ({ movie }) => {
     };
   }, []);
 
-  // Handle time update
   useEffect(() => {
     const video = videoRef.current;
     
@@ -53,7 +51,6 @@ const VideoPlayer = ({ movie }) => {
     };
   }, []);
 
-  // Handle screen orientation
   useEffect(() => {
     if (window.screen.orientation && orientation === 'portrait') {
       window.screen.orientation.lock('portrait').catch(() => {});
@@ -66,7 +63,6 @@ const VideoPlayer = ({ movie }) => {
     };
   }, [orientation]);
 
-  // Auto hide controls
   useEffect(() => {
     let timer;
     if (isPlaying) {
@@ -78,14 +74,12 @@ const VideoPlayer = ({ movie }) => {
     return () => clearTimeout(timer);
   }, [isPlaying, showControls]);
 
-  // Format time
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
-  // Toggle play/pause
   const togglePlay = () => {
     const video = videoRef.current;
     if (isPlaying) {
@@ -97,19 +91,16 @@ const VideoPlayer = ({ movie }) => {
     setShowControls(true);
   };
 
-  // Skip backward 10 seconds
   const skipBackward = () => {
     videoRef.current.currentTime -= 10;
     setShowControls(true);
   };
 
-  // Skip forward 10 seconds
   const skipForward = () => {
     videoRef.current.currentTime += 10;
     setShowControls(true);
   };
 
-  // Toggle mute
   const toggleMute = () => {
     const video = videoRef.current;
     if (isMuted) {
@@ -122,7 +113,6 @@ const VideoPlayer = ({ movie }) => {
     setShowControls(true);
   };
 
-  // Handle volume change
   const handleVolumeChange = (e) => {
     const newVolume = parseFloat(e.target.value);
     setVolume(newVolume);
@@ -131,7 +121,6 @@ const VideoPlayer = ({ movie }) => {
     setShowControls(true);
   };
 
-  // Handle progress bar change
   const handleProgressChange = (e) => {
     const newTime = parseFloat(e.target.value);
     videoRef.current.currentTime = newTime;
@@ -139,7 +128,6 @@ const VideoPlayer = ({ movie }) => {
     setShowControls(true);
   };
 
-  // Toggle fullscreen
   const toggleFullscreen = () => {
     const container = containerRef.current;
     
@@ -165,7 +153,6 @@ const VideoPlayer = ({ movie }) => {
     setShowControls(true);
   };
 
-  // Toggle orientation
   const toggleOrientation = () => {
     setOrientation(prev => prev === 'landscape' ? 'portrait' : 'landscape');
     setShowControls(true);
@@ -205,25 +192,24 @@ const VideoPlayer = ({ movie }) => {
               onClick={toggleOrientation}
               className="p-2 hover:bg-white/20 rounded-full transition-colors"
             >
-              <FiRotateCw className="text-xl" /> {/* Ganti RotateCw jadi FiRotateCw */}
+              <FiRotateCw className="text-xl" />
             </button>
             <button
               onClick={toggleFullscreen}
               className="p-2 hover:bg-white/20 rounded-full transition-colors"
             >
-              <FiMaximize className="text-xl" /> {/* Ganti Maximize jadi FiMaximize */}
+              <FiMaximize className="text-xl" />
             </button>
           </div>
         </div>
 
-        {/* Center Controls */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="flex items-center space-x-8">
             <button
               onClick={skipBackward}
               className="p-4 hover:bg-white/20 rounded-full transition-colors"
             >
-              <FiSkipBack className="text-3xl" /> {/* Ganti SkipBack jadi FiSkipBack */}
+              <FiSkipBack className="text-3xl" />
             </button>
             
             <button
