@@ -270,7 +270,7 @@ const VideoPlayer = ({ movie }) => {
                 className="p-2 hover:bg-white/20 rounded-full transition-colors"
               >
                 {isPlaying ? (
-                  <FiPause className="text-xl" /> {/* Ganti Pause jadi FiPause */}
+                  <FiPause className="text-xl" />
                 ) : (
                   <FiPlay className="text-xl" /> {/* Ganti Play jadi FiPlay */}
                 )}
