@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import VideoPlayer from '../components/Player/VideoPlayer';
 import MovieCard from '../components/Shared/MovieCard';
 import { movies, additionalMovies } from '../data/movies';
-import { FiChevronLeft } from 'react-icons/fi'; // Perbaiki import
+import { FiChevronLeft } from 'react-icons/fi';
 
 const WatchPage = () => {
   const { id } = useParams();
@@ -13,11 +13,9 @@ const WatchPage = () => {
   const [recommendations, setRecommendations] = useState([]);
 
   useEffect(() => {
-    // Find current movie
     const currentMovie = [...movies, ...additionalMovies].find(m => m.id === parseInt(id));
     setMovie(currentMovie);
 
-    // Generate recommendations based on genre
     if (currentMovie) {
       const allMovies = [...movies, ...additionalMovies];
       const filtered = allMovies
@@ -61,7 +59,7 @@ const WatchPage = () => {
           onClick={() => navigate('/')}
           className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
         >
-          <FiChevronLeft /> {/* Ganti ChevronLeft jadi FiChevronLeft */}
+          <FiChevronLeft />
           <span>Back to Home</span>
         </button>
       </div>
