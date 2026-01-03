@@ -272,7 +272,7 @@ const VideoPlayer = ({ movie }) => {
                 {isPlaying ? (
                   <FiPause className="text-xl" />
                 ) : (
-                  <FiPlay className="text-xl" /> {/* Ganti Play jadi FiPlay */}
+                  <FiPlay className="text-xl" />
                 )}
               </button>
               
