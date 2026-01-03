@@ -262,7 +262,6 @@ const VideoPlayer = ({ movie }) => {
             <span className="text-sm">{formatTime(duration)}</span>
           </div>
 
-          {/* Volume and Other Controls */}
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <button
