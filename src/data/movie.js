@@ -34,7 +34,6 @@ export const movies = [
     }
 ];
 
-// Film tambahan untuk rekomendasi
 export const additionalMovies = [
     {
         id: 4,
