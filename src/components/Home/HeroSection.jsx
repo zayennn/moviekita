@@ -33,7 +33,7 @@ const HeroSection = () => {
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-full font-bold flex items-center space-x-2"
           >
-            <FiPlay className="text-xl" /> {/* Ganti Play jadi FiPlay */}
+            <FiPlay className="text-xl" />
             <span>Start Watching Free</span>
           </motion.button>
         </div>
