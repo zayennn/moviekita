@@ -283,7 +283,7 @@ const VideoPlayer = ({ movie }) => {
                 {isMuted ? (
                   <FiVolumeX className="text-xl" /> {/* Ganti VolumeX jadi FiVolumeX */}
                 ) : (
-                  <FiVolume2 className="text-xl" /> {/* Ganti Volume2 jadi FiVolume2 */}
+                  <FiVolume2 className="text-xl" />
                 )}
               </button>
               
