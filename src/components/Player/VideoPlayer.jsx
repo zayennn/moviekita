@@ -281,7 +281,7 @@ const VideoPlayer = ({ movie }) => {
                 className="p-2 hover:bg-white/20 rounded-full transition-colors"
               >
                 {isMuted ? (
-                  <FiVolumeX className="text-xl" /> {/* Ganti VolumeX jadi FiVolumeX */}
+                  <FiVolumeX className="text-xl" />
                 ) : (
                   <FiVolume2 className="text-xl" />
                 )}
