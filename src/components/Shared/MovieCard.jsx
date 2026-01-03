@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiPlay, FiClock, FiCalendar } from 'react-icons/fi'; // Perbaiki import
+import { FiPlay, FiClock, FiCalendar } from 'react-icons/fi';
 
 const MovieCard = ({ movie }) => {
   return (
